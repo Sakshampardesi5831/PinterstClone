@@ -1,0 +1,162 @@
+@font-face {
+    font-family: myfont;
+    src: url(../font/SEGOEUI.TTF);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: myfont;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+#heading{
+    width: 100%;
+    padding: 0.5vw 0.5vw;
+}
+#back-arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+}
+#back-arrow>a{
+    text-decoration: none;
+}
+#heading>h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.5vw 0.5vw;
+    font-size: 3.5vw;
+
+}
+#post
+{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 90vh;
+    /* background-color: aquamarine; */
+}
+.post-body{
+    display: flex;
+    width: 70%;
+    min-height: 85vh;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.photo{
+    width: 50%;
+    height: 85vh;
+    /* border: 2px solid black; */
+    border-radius: 20px;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+.post-details{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2vw;
+    padding-top: 1vw;
+    width: 50%;
+    height: 85vh;
+    /* border: 2px solid black; */
+    border-radius: 20px;
+}
+#post-form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    min-height: 15vh;
+}
+#boardname{
+    width: 75%;
+    padding: 1vw 0.5vw;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    font-size: 1.2vw;
+}
+#boardname>option{
+    width: 70%;
+    padding: 1vw 0.5vw;
+}
+#submit{
+    width: 20%;
+    padding: 1vw 0.5vw;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #e60023 ;
+    color: white;
+    font-size: 1vw;
+}
+
+#Post-name
+{
+    width: 95%;
+   padding: 0.5vw 0.5vw;
+}
+#Post-name>h1{
+    font-size: 3vw;
+    width: 95%;
+    padding: 0.5vw 0.5vw;
+}
+#Post-name>p{
+    width: 95%;
+    padding: 0.5vw 0.5vw;
+    margin-top: 0.5vw;
+}
+#user-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 95%;
+    padding: 1vw 1vw;
+    margin-top: 0.5vw;
+}
+#user-photo{
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+}
+#user-photo>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+#user-details{
+    width: 80%;
+    height: 10vh;
+}
+#user-details>h2{
+    font-size: 2.0vw;
+}

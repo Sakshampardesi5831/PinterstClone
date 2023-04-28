@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/viewAllBoardPics.css">
+</head>
+<body>
+    <div id="main">
+      <div class="heading">
+          <h1> <span><i class="ri-pinterest-fill"></i></span><%=pinBoard.boardTitle%></h1>
+      </div>
+      <div id="board-section">
+        <%pinBoard.postDetail.forEach(function(elem){%>
+            <div class="card">
+                <div class="card-photo"><img src="/image/<%=elem.pinImage%>" alt=""></div>
+                 <div class="card-title">
+                    <h3><%=elem.pinTitle%></h3>
+                </div>
+             </div>
+        <%})%>
+      </div>
+    </div>
+</body>
+</html>

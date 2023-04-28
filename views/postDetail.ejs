@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostDetail</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/postDetail.css">
+</head>
+<body>
+    <div id="main">
+        <div id="back-arrow"><a href="/post"><i class="ri-arrow-left-line"></i></a></div>
+        <div id="heading"><h1>Post Detail</h1></div>  
+        <div id="post">
+            <div class="post-body">
+                <div class="photo">
+                    <img src="/image/<%=pin.pinImage%>" alt="product-photo">
+                </div>
+                <div class="post-details">
+                    <form action="/boardpics/<%=pin._id%>/" id="post-form">
+                         <select name="boardname" id="boardname">
+                           <%user.myboard.forEach(function(elem){%>
+                            <option value="<%=elem.boardTitle%>"><%=elem.boardTitle%></option>
+                           <%})%>
+                         </select>
+                         <input type="submit"  id="submit">
+                    </form>
+
+                    <div id="Post-name">
+                        <h1><%=pin.pinTitle%></h1>
+                        <p><%=pin.desc%></p>
+                    </div>
+                    <div id="user-name">
+                        <div id="user-photo">
+                            <img src="/image/<%=user.profilePic%>" alt="">
+                        </div>
+                        <div id="user-details">
+                            <h2><%=user.username%></h2>
+                            <p><%=user.email%></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

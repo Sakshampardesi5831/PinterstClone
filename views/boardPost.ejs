@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boardPost</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/boardPost.css">
+</head>
+<body>
+    <div id="main">
+        <div id="back-button"><a href="/post"><i class="ri-arrow-left-line"></i></a></div>
+        <div id="heading"><h1>  <span><i class="ri-pinterest-fill"></i></span> PINTERST BOARD</h1></div>
+        <div class="boardsCollection">
+        <% user.myboard.forEach(function(elem){%>
+            <div id="cards">
+                <h1><%=elem.boardTitle%></h1>
+                <a href="/viewAllBoardPics/<%=elem.boardTitle%>">View all</a>
+            </div>
+        <%})%>       
+        </div>
+    </div> 
+</body>
+</html>

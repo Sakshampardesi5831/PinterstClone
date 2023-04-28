@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile-section</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/profile.css">
+</head>
+<body>
+    <div id="main">
+        <div id="back-arrow"><a href="/post"><i class="ri-arrow-left-line"></i></a></div>
+        <div class="heading">
+            <h1><span><i class="ri-pinterest-fill"></i></span> Profile-section</h1>
+        </div>
+        <div class="profile-section">
+            <div class="photo-section"><img src="/image/<%=user.profilePic%>" alt=""></div>
+            <div class="profile-details">
+                <h1 id="name"><%=user.name%></h1>
+                <h6 id="username"><%=user.username%></h6>
+                <div id="buttons">
+                     <a href="/updateProfile">EDIT PROFILE</a>
+                </div>
+            </div>
+            <hr>
+            <div class="profile-board">
+               <h1>UserCreated Board</h1>
+              <div id="profile-board-section">
+                <%user.myboard.forEach(function(elem,i){%>
+                    <div class="board">
+                        <h1><%=elem.boardTitle%></h1>
+                         <h6>Saved Pins:-<%=i+1%></h6>
+                        <a href="/viewAllBoardPics/<%=elem.boardTitle%>">viewAll</a>
+                    </div>
+                <%})%>  
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

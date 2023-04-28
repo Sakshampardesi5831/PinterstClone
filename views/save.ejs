@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Favorite List</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/save.css" />
+  </head>
+  <body>
+      <div id="main">
+        <div id="back-arrow">
+           <a href="/post"><i class="ri-arrow-left-line"></i></a>
+        </div>
+       <h1> <span><i class="ri-pinterest-fill"></i></span> MY FAVORITE LIST</h1>
+       <div class="collection">
+        <%user.mysave.forEach(function(elem){%>
+          <div id="cards">
+            <div id="card-img">
+                <img src="/image/<%=elem.pinImage%>" alt="">
+            </div>
+            <div id="mytitles">
+               <h3><%=elem.pinTitle%></h3>
+            </div>
+         </div>
+        <%})%>    
+       </div>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,393 @@
+@font-face {
+  font-family: myfont;
+  src: url(../font/SEGOEUI.TTF);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: myfont;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.navigation{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 0.5vw;
+  z-index: 10;
+}
+
+.logo{
+  display:flex;
+  justify-content:start;
+  align-items: center;
+  gap: 2px;
+  width: 15%;
+  height: 100%;
+  font-family: myfont;
+  font-weight: 400;
+  font-size: 13px;
+  color: #cc0505;
+}
+#logo{
+  width: 2vw;
+  height: 2vw;
+  background-image: url(../images/images-removebg-preview.png);
+  background-size: cover;
+  background-position: center;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  width: 30%;
+  height: 100%;
+  padding: 0 2vw;
+}
+.nav>a{
+  text-decoration: none;
+  font-family: myfont;
+  font-size: 1.2vw;
+  color: black;
+  font-weight: 600;
+}
+.button-section  button{
+  padding: 10px 10px;
+  font-size: 1.2vw;
+  background-color: #e60023;
+  border-radius: 100px;
+  border: none; 
+  color: white;
+}
+.button-section  button:nth-child(2){
+  background-color: #efefef;
+  color: #000;
+}
+
+#main{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+#overlayer{
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background-color: #0000009a;
+   display: none;
+}
+#register{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 30%;
+   min-height: 90vh;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  opacity: 0;
+  z-index: 20;
+}
+#register>i{
+  position: absolute;
+  top: 2%;
+  right: 10%;
+  font-size: 2.5vw;
+  display: block;
+  padding: 0.2vw 0.2vw;
+  border-radius: 50%;
+}
+#register>i:hover{
+  background-color: #efefef;
+}
+#register>h3{
+  margin-top: 10px;
+  font-size: 1vw;
+  font-weight: 400;
+}
+#register>h1{
+  margin-top: 10px;
+  color: #373737;
+}
+#registerlogo{
+  width: 2.5vw;
+  height: 2.5vw;
+  background-image: url(../images/images-removebg-preview.png);
+  background-size: cover;
+  background-position: center;
+}
+#form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 80%;
+  min-height: 60vh;
+  padding-left: 2vw;
+}
+#form label{
+  text-transform: capitalize;
+}
+#form input{
+  width: 90%;
+  padding: 15px 20px;
+  border: 2px solid #cdcdcd ;
+  border-radius: 20px;
+  font-size: 1vw;
+}
+#form input::placeholder{
+  font-size: 1vw;
+}
+#form>button{
+  width: 90%;
+  padding: 0.5vw 1vw;
+  background-color:#e60023 ;
+  color: white;
+  border-radius: 100px;
+  font-size: 1.2vw;
+  margin-top: 0.5vw;
+  border: none;
+}
+#form>#or{
+  width: 100%;
+  text-align: center;
+}
+#form>#countinue{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 90%;
+   padding: 0.5vw 1.2vw;
+   background-color: white;
+   border: 2px solid rgba(0, 0, 0, 0.41);
+   border-radius: 100px;
+}
+#form>#countinue>a{
+  text-decoration: none;
+  color: #000;
+  font-size: 1.3vw;
+  font-family: myfont;
+  font-weight: 600;
+}
+#google{
+  width: 2vw;
+  height: 2vw;
+  background-image: url(../images/google-removebg-preview.png);
+  background-position: center;
+  background-size: cover;
+}
+.register-footer{
+  width: 80%;
+  min-height: 10vh;
+  text-align: center;
+  font-family: myfont;
+}
+.register-footer>p{
+  font-size: 0.9vw;
+}
+.register-footer>p>span{
+  font-weight: 600;
+  padding-left: 1px;
+}
+#redirect-to-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  width: 100%;
+  padding: 1vw 1vw;
+}
+#redirect-to-login>p{
+  font-weight: 600;
+}
+#redirect-to-login>a{
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+
+/*----------------------------------------LOGIN CARD------------------------------------------------*/
+#login-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 30%;
+  min-height: 90vh;
+  background-color: white;
+  border-radius: 30px;
+  opacity: 0;
+  z-index: 30;
+  position: relative;
+}
+#login-section>#close{
+  position: absolute;
+  right: 10%;
+  top: 5%;
+  font-size: 2vw;
+  display: block;
+  padding: 0.5vw;
+  border-radius: 50%;
+  background-color: antiquewhite;
+}
+#login-logo{
+  width: 3.5vw;
+  height: 3.5vw;
+  background-image: url(../images/images-removebg-preview.png);
+  background-size: cover;
+  background-position: center;
+}
+#login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 80%;
+  min-height: 55vh;
+  padding-left: 2vw;
+  margin-top: 10px;
+}
+#login-form>input{
+  width: 90%;
+  padding: 15px 20px;
+  border: 2px solid #cdcdcd ;
+  border-radius: 20px;
+  font-size: 1vw;
+}
+#login-form>.forget{
+  width: 100%;
+  padding: 0.5vw 0.5vw;
+}
+#login-form>.forget>a{
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+#login-form>button{
+  width: 90%;
+  padding: 0.5vw 1vw;
+  background-color:#e60023 ;
+  color: white;
+  border-radius: 100px;
+  font-size: 1.2vw;
+  margin-top: 1vw;
+  border: none;
+}
+#login-form>#or{
+  width: 100%;
+  margin-top: 1vw;
+  font-size: 0.7vw;
+}
+#login-form>#or>h2{
+  text-align: center;
+}
+#login-form>#google1{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  padding: 0.2vw 0.5vw;
+  background-color: white;
+  border-radius: 100px;
+  margin-top: 1vw;
+  border: 2px solid rgba(0, 0, 0, 0.41);
+}
+#login-form>#google1>a{
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.2vw;
+ color: #000;
+}
+#login-form>#google1>#googleimg{
+  width: 2.5vw;
+  height: 2.5vw;
+  background-image: url(../images/google-removebg-preview.png);
+  background-size: cover;
+  background-position: center;
+}
+#login-section>#login-footer>p{
+  width: 100%;
+  text-align: center;
+  padding: 0 2vw;
+  margin-top: 10px;
+}
+#login-footer>p>span{
+  font-weight: 600;
+  gap: 5px;
+}
+#login-section>hr{
+  width: 30%;
+  margin-top: 10px;
+
+}
+#login-section>#redirect-to-signup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 90%;
+  padding: 0.5vw;
+}
+#login-section>#redirect-to-signup>p{
+  font-weight: 600;
+}
+#login-section>#redirect-to-signup>a{
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+
+/*--------------------------------------------LOGIN FRONTEND KHATAM------------------------------------------------------------------------*/
+
+#mycards{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+  width: 100%;
+  min-height: 90vh;
+}
+.card{
+  width: 20%;
+  height: 55vh;
+  margin-top: 1vw;
+  margin-left: 1vw;
+  /* border: 1px solid #000; */
+  overflow: hidden;
+  border-radius: 20px;
+  /* background-color: #fff; */
+}
+.card-img{
+  width: 100%;
+  min-height: 25vh;
+}
+.card-img img{
+  width: 100%;
+  object-fit:cover;
+  object-position: center;
+  border-radius: 20px;
+}

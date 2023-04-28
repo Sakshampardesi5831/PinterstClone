@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALLPOST PAGE</title>
+    <!-- <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./stylesheets/post.css"/>
+  </head>
+  <body>
+    <!------------------------------------------------------------------------------------>
+    
+    <!------------------------------------------------------------------------------------->
+    <div id="dialog-box">
+      <div id="box-1"><a href="">Create Idea Pin</a></div>
+      <div id="box-2"><a href="/createPin">Create Pin</a></div>
+      <i class="ri-close-fill" id="close"></i>
+    </div>
+    <div id="navigation">
+      <div id="logo"></div>
+      <div class="nav1">
+        <a href="/post">Home</a>
+        <a href="/myBoard">Board</a>
+        <div id="create-section">
+          <h4>Create</h4>
+          <i class="ri-arrow-down-s-line"></i>
+        </div>
+      </div>
+      <input type="text" placeholder="search" name="search" id="search" />
+      <div class="icons">
+        <i class="ri-notification-3-fill" id="notify"></i>
+        <i class="ri-chat-3-fill" id="chat"></i>
+        <div id="profile-box"><a href="/profile-section">P</a></div>
+        <i class="ri-arrow-down-s-line" id="down-arrow"></i>
+      </div>
+    </div>
+    <div id="side-nav">
+      <i class="ri-close-fill" id="close"></i>
+      <p>currently in</p>
+      <div id="user-data">
+        <div id="user-photo"><img src="/image/<%=user.profilePic%>" alt="u" /></div>
+        <div id="user-detail">
+          <h3><%=user.username%></h3>
+          <h6><%=user.name%></h6>
+          <h6><%=user.email%></h6>
+        </div>
+      </div>
+      <div id="account-detail">
+        <p>My Account</p>
+        <div class="settings">
+          <a href="/updateProfile">ACCOUNT</a>
+          <a href="/mysave">FAVORITE-LIST</a>
+          <button type="button" data-toggle="modal"  data-target="#exampleModal" id="myboard">Create the board</button>
+        </div>
+      </div>
+      <hr />
+      <div class="button">
+        <a href="/logout">Log Out</a>
+      </div>
+    </div>

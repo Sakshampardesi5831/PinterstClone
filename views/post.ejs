@@ -1,0 +1,46 @@
+<% include ./partials/header.ejs %>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!----------------------------------------------------------------------->
+        <form action="/myBoard" method="post">
+          <div class="form-group">
+            <label>CREATE YOUR BOARD</label>
+            <input type="text" name="boardTitle" class="form-control"placeholder="Enter Board title">
+          </div>
+          <button type="submit" class="btn btn-primary">CREATE</button>
+        </form>
+        <!----------------------------------------------------------------------->
+      </div>
+    </div>
+  </div>
+</div>
+<!---------------------------------------yaha tak copy kiya hai------------------------------------------------------------------>
+<div id="main">
+ <%post.reverse().forEach(function(elem){%>
+  <div class="mycards">
+    <div class="card-img">
+      <img src="/image/<%=elem.pinImage%>" alt="" />
+      <h3 class="postTitle"><%=elem.pinTitle%></h3>
+      <div id="postDetails">
+        <a href="/saveBoard/<%=elem._id%>">Save</a>
+        <div class="buttons">
+          <a href="/savePost/<%=elem._id%>"><i class="ri-heart-add-line"></i></a>
+        </div>
+      </div> 
+    </div>
+    
+  </div>
+ <%})%>
+</div>
+<!---------------------------------------------------------------------------------------------------->
+<% include ./partials/footer.ejs %>
