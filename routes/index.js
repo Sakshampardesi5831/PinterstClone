@@ -9,7 +9,7 @@ const LocalStrategy=require("passport-local");
 var mongoose=require("mongoose");
 passport.use(new LocalStrategy(userModel.authenticate()));
 /*-----------------------------------------------------------------------------------*/
-const mongooseURI="mongodb://localhost/pinDb";
+const mongooseURI="mongodb+srv://sakshampardeshi6610:NVJBe5qcK4VWNMbj@cluster0.bgpdm0a.mongodb.net/pindb?retryWrites=true&w=majority";
 const conn = mongoose.createConnection(mongooseURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,

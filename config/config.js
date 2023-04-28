@@ -3,7 +3,7 @@ var multer=require("multer");
 let crypto=require("crypto");
 let path=require("path");
 const gridFsStorage=require("multer-gridfs-storage").GridFsStorage;
-const mongooseURI="mongodb://localhost/pinDb";
+const mongooseURI="mongodb+srv://sakshampardeshi6610:NVJBe5qcK4VWNMbj@cluster0.bgpdm0a.mongodb.net/pindb?retryWrites=true&w=majority";
 const conn = mongoose.createConnection(mongooseURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
